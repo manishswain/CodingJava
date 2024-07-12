@@ -1,0 +1,13 @@
+Dog
+Husky
+Grey
+20
+pet
+14
+
+Elephant
+African
+Grayish
+40
+forest
+70
