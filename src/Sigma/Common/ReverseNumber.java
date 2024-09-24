@@ -40,6 +40,7 @@ public class ReverseNumber {
         return finalReverse;
     }
 
+    // Leetcode Top Answer
     private static int reverseNum2(int num) {
         String reversed = new StringBuilder().append(Math.abs(num)).reverse().toString();
         try {
