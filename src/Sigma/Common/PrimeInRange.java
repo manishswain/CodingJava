@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class PrimeInRange {
     public static boolean checkPrime(int n) {
+
         if (n == 2) {
             return true;
         }
