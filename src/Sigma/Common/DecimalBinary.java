@@ -1,4 +1,4 @@
-package Sigma.Common;
+package Common;
 
 public class DecimalBinary {
     public static void main(String[] args) {

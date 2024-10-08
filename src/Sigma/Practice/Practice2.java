@@ -1,4 +1,4 @@
-package Sigma.Practice;
+package Practice;
 
 public class Practice2 {
 

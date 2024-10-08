@@ -1,5 +1,3 @@
-package Sigma.PatternAndPyramid;
-
 public class Pyramid1 {
     public static void main(String[] args) {
         for (int i = 0; i <= 5; i++) {

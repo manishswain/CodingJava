@@ -1,4 +1,4 @@
-package Sigma.Practice;
+package Common;
 
 import java.util.Scanner;
 

@@ -1,5 +1,3 @@
-package Sigma.PatternAndPyramid;
-
 public class CharacterPyramid {
     public static void main(String[] args) {
         char ch = 'A';
