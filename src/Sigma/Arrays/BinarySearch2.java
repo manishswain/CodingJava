@@ -1,6 +1,6 @@
 package Arrays;
 
-public class BinarySearch {
+public class BinarySearch2 {
     public static void main(String[] args) {
         int[] arr = { 1, 4, 6, 90, 108, 508, 1000 };
         int key = 1;

@@ -2,7 +2,7 @@ package Arrays;
 
 import java.util.Arrays;
 
-public class Initial {
+public class Initial1 {
     public static void main(String[] args) {
         int marks[] = { 98, 99, 100 };
         int primiNonChangable = 9;

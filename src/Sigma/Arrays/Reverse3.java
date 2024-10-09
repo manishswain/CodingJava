@@ -2,7 +2,7 @@ package Arrays;
 
 import java.util.Arrays;
 
-public class Reverse {
+public class Reverse3 {
     public static void main(String[] args) {
         int[] arr = { 1, 4, 6, 90, 108, 508, 1000 };
 
@@ -12,10 +12,13 @@ public class Reverse {
 
     private static int[] reverseArray(int[] arr) {
         int start = 0, last = arr.length - 1;
-        for (int i = start; i <= last / 2; i++, last--) {
-            int temp = arr[i];
-            arr[i] = arr[last];
+        while (start < last) {
+            int temp = arr[start];
+            arr[start] = arr[last];
             arr[last] = temp;
+
+            start++;
+            last--;
         }
         return arr;
     }
