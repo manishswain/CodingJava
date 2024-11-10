@@ -19,6 +19,8 @@ public class MemberInnerClass {
         Integer man = null;
         int n = 5;
         Integer man1 = n;
+
+        Throwable th = new Throwable();
     }
 }
 
