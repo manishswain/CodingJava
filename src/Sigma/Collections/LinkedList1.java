@@ -1,4 +1,4 @@
-package Generics;
+package Collections;
 
 import java.util.LinkedList;
 import java.util.List;
