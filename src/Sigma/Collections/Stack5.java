@@ -2,7 +2,7 @@ package Collections;
 
 import java.util.Stack;
 
-public class Stack1 {
+public class Stack5 {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
         stack.push(1);

@@ -3,7 +3,7 @@ package Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class LinkedList1 {
+public class LinkedList3 {
     public static void main(String[] args) {
         List<Integer> list = new LinkedList<>();
         list.add(1);

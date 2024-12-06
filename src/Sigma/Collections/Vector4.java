@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
-public class Vector1 {
+public class Vector4 {
     public static void main(String[] args) {
         Vector<Integer> list = new Vector<>(5, 6);
 
