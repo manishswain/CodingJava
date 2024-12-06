@@ -46,7 +46,7 @@ class DescComparator implements Comparator<Integer> {
 
 }
 
-class Student {
+class Student implements Comparable<Student> {
 
     private String name;
 
@@ -81,6 +81,11 @@ class Student {
         sb.append(", gpa=").append(gpa);
         sb.append('}');
         return sb.toString();
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return Double.compare(o.getGpa(), this.getGpa());
     }
 
 }
