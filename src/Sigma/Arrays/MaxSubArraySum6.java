@@ -5,18 +5,30 @@ import java.util.Arrays;
 public class MaxSubArraySum6 {
     public static void main(String[] args) {
         int[] arr = { -2, -3, 4, -1, -2, 1, 5, -3 };
-        int[] arr2 = { -1, -100, -100 };
+        int[] arr2 = { -100, -1, -100 };
         int[] result1 = maxSubArraySumBrute(arr);
         System.out.println("Min and Max values are " + Arrays.toString(result1));
 
         int result2 = maxSubArraySumPrefixSum(arr);
         System.out.println("Max values are " + result2);
 
-        int result3 = maxSubArraySumKadanes(arr2);
+        int result3 = maxSubArraySumKadanes(arr);
         System.out.println("Max values are " + result3);
 
-        int result4 = maxSubArraySumKadanesCopilot(arr);
+        int result4 = maxSubArraySumKadanesCopilot(arr2);
         System.out.println("Max values are " + result4);
+    }
+
+    private static int maxSubArraySumKadanesCopilot(int[] arr) {
+        int currSum = arr[0];
+        int maxSum = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            currSum = Math.max(arr[i], currSum + arr[i]);
+            maxSum = Math.max(maxSum, currSum);
+        }
+
+        return maxSum < 0 ? 0 : maxSum;
     }
 
     private static int maxSubArraySumKadanes(int[] arr) {
@@ -40,15 +52,12 @@ public class MaxSubArraySum6 {
         for (int i = 1; i < arr.length; i++) {
             prefixSum[i] = arr[i] + prefixSum[i - 1];
         }
+        System.out.println(Arrays.toString(prefixSum));
         for (int i = 0; i < prefixSum.length; i++) {
             for (int j = i; j < prefixSum.length; j++) {
-                if (i == 0) {
-                    localSum = prefixSum[j];
-                } else if (i == j) {
-                    localSum = arr[j];
-                } else {
-                    localSum = prefixSum[j] - prefixSum[i - 1];
-                }
+
+                localSum = i == 0 ? prefixSum[j] : prefixSum[j] - prefixSum[i - 1];
+
                 if (localSum > maxSubArrSum) {
                     maxSubArrSum = localSum;
                 }
@@ -77,18 +86,6 @@ public class MaxSubArraySum6 {
             }
         }
         return new int[] { minSum, maxSum };
-    }
-
-    private static int maxSubArraySumKadanesCopilot(int[] arr) {
-        int currSum = arr[0];
-        int maxSum = arr[0];
-
-        for (int i = 1; i < arr.length; i++) {
-            currSum = Math.max(arr[i], currSum + arr[i]);
-            maxSum = Math.max(maxSum, currSum);
-        }
-
-        return maxSum;
     }
 
 }
