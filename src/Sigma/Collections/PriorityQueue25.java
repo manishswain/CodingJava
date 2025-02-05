@@ -2,7 +2,7 @@ package Collections;
 
 import java.util.PriorityQueue;
 
-public class PrirityQueue25 {
+public class PriorityQueue25 {
     public static void main(String[] args) {
         // part of the Queue interface
         // orders elements based on their natural ordering (for primitives lowest first)

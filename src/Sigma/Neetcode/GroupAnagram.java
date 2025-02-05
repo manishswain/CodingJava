@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class GroupAnagram {
     public static void main(String[] args) {
-        String[] arr = { "bdddddddddd", "bbbbbbbbbbc" };
+        String[] arr = { "eat", "tea", "tan", "ate", "nat", "bat" };
 
         System.out.println(groupAnagramOptimal(arr));
     }
