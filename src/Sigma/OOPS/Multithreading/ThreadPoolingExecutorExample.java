@@ -12,6 +12,7 @@ public class ThreadPoolingExecutorExample {
         for (int i = 1; i < 10; i++) {
             int finalI = i;
             executor.submit(() -> {
+                System.out.println(Thread.currentThread().getName());
                 System.out.println(factorial(finalI));
             });
         }
