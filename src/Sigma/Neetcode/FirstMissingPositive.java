@@ -5,7 +5,7 @@ import java.util.NavigableSet;
 import java.util.TreeSet;
 
 public class FirstMissingPositive {
-    public static void main(String[] args) {
+    void main(String[] args) {
 
         int[] nums = { 1, 2, 0 };
         System.out.println(firstMissingPositive(nums));
