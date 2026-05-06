@@ -14,12 +14,12 @@ public class ParallelStream {
         List<Integer> list = Stream.iterate(1, x -> x + 1).limit(20000).toList();
 
         long startTime = System.currentTimeMillis();
-        List<Long> factorialsList = list.stream().map(ParallelStream::factorial).toList();
+        list.stream().map(ParallelStream::factorial).toList();
         long endTime = System.currentTimeMillis();
         System.out.println("Time taken with sequential stream: " + (endTime - startTime) + " ms");
 
         startTime = System.currentTimeMillis();
-        factorialsList = list.parallelStream().map(ParallelStream::factorial).toList();
+        list.parallelStream().map(ParallelStream::factorial).toList();
         // list.parallelStream().map(ParallelStream::factorial).sequential().toList();
         endTime = System.currentTimeMillis();
         System.out.println("Time taken with parallel stream: " + (endTime - startTime) + " ms");
